@@ -15,8 +15,8 @@ void main(){
 }
 
 class Grids extends CustomPainter {
-  int j;
-   Grids(this.j);
+  int grid_lines;
+   Grids(this.grid_lines);
  
   
   @override
@@ -38,28 +38,28 @@ class Grids extends CustomPainter {
       Paint paint
       ){
 
-    double dist = size.width/j;
+    double dist = size.width/grid_lines;
 
 
-double x =0;
-  int k =j;
-  while(j>0){
+double x_axis_lines =0;
+  int grid_lines_copy =grid_lines;
+  while(grid_lines>0){
       
       
-      final p1 = Offset(0, x);
-      final p2 = Offset(size.width,x);
+      final p1 = Offset(0, x_axis_lines);
+      final p2 = Offset(size.width,x_axis_lines);
       canvas.drawLine(p1, p2, paint);
-      x+=dist;
-      j--;
+      x_axis_lines+=dist;
+      grid_lines--;
   }
 
-double y =0;
-  while(k>0){
-      final p1 = Offset(y, 0);
-      final p2 = Offset(y,size.width);
+double y_axis_lines =0;
+  while(grid_lines_copy>0){
+      final p1 = Offset(y_axis_lines, 0);
+      final p2 = Offset(y_axis_lines,size.width);
       canvas.drawLine(p1, p2, paint);
-      y+=dist;
-      k--;
+      y_axis_lines+=dist;
+      grid_lines_copy--;
   }
   
 
@@ -109,7 +109,7 @@ class GridView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-        List <double> myScale = [];
+        List <double> onScaleUpdate = [];
 
 
     return Scaffold(
@@ -126,14 +126,14 @@ onScaleUpdate: ( details){
   print("on scale update ${details.scale}");
 
 
-    myScale.add(details.horizontalScale);
+    onScaleUpdate.add(details.horizontalScale);
 
 
 },
 onScaleEnd: (ScaleEndDetails details){
   print("on scale end ${details}");
-  double scales = myScale[myScale.length-1];
-  myScale.clear();
+  double scales = onScaleUpdate[onScaleUpdate.length-1];
+  onScaleUpdate.clear();
 
      BlocProvider.of<GestureBloc>(context).add(ScaleUpDownEvent(scales));
 },

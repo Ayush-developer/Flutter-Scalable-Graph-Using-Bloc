@@ -3,8 +3,8 @@ class GestureEvent{}
 
 class ScaleUpDownEvent extends GestureEvent{
 
-  final double upVal;
+  final double upDownVal;
 
-  ScaleUpDownEvent(this.upVal);
+  ScaleUpDownEvent(this.upDownVal);
 }
 
