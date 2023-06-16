@@ -142,7 +142,14 @@ child: Container(
                
                   height: MediaQuery.of(context).size.height*(342)/(844),
                   width: MediaQuery.of(context).size.height*(342)/(844),
-                  color: Color(0xFF1B1C28),
+         
+                   decoration: BoxDecoration(
+                             color: Color(0xFF1B1C28),
+    border: Border.all(
+      width: 1, color:
+       Color(0xFF454545)
+    ),
+  ),
                   child: 
               
               
