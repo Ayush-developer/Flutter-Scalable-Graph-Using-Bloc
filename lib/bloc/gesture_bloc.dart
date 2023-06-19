@@ -9,21 +9,21 @@ class GestureBloc extends Bloc<GestureEvent,GestureState>{
 
      GestureBloc():super(GestureInitialState(6)){
          on<ScaleUpDownEvent> ((event,emit){
-              if (event.upVal>1 && scale!=6){
+              if (event.upDownVal>1 && scale!=6){
         scale=scale+1;
         emit(GestureNewState(scale));
 
       }
-      else if (event.upVal>1 && scale==6){
+      else if (event.upDownVal>1 && scale==6){
 
         emit(GestureNewState(scale));
      
       }
-       else if (event.upVal<1 && scale==1){
+       else if (event.upDownVal<1 && scale==1){
         emit(GestureNewState(scale));
 
       }
-       else if (event.upVal>1 && scale==1){
+       else if (event.upDownVal>1 && scale==1){
         scale = scale+1;
         emit(GestureNewState(scale));
       }
