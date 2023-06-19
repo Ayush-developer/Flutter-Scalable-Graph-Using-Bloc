@@ -125,8 +125,10 @@ class GridView extends StatelessWidget {
 onScaleUpdate: ( details){
   print("on scale update ${details.scale}");
 
+if(details.horizontalScale!=1){
 
     onScaleUpdate.add(details.horizontalScale);
+}
 
 
 },
