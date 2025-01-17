@@ -28,13 +28,16 @@ A Flutter application that provides scalable graph functionality using the Bloc 
    
 2. Navigate to the project directory:
 
+   ```bash
    cd Flutter-Scalable-Graph-Using-Bloc
 
 3. Install the dependencies:
 
-   flutter pub get
+    ```bash
+    flutter pub get
 
 4. Run the application:
 
-   flutter run
+    ```bash
+    flutter run
 
