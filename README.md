@@ -1,16 +1,40 @@
-#Scalable Map
+# Flutter Scalable Graph Using Bloc
 
-A new Flutter project.
+A Flutter application that provides scalable graph functionality using the Bloc (Business Logic Component) pattern for effective state management.
 
-## Getting Started
+## Table of Contents
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-This project is a starting point for a Flutter application.
+## Features
+- Scalable graph visualization
+- Efficient state management with Bloc
+- Cross-platform support (Android, iOS, Web, Desktop)
 
-A few resources to get you started if this is your first Flutter project:
+## Technology Stack
+- **Flutter**: A UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.
+- **Dart**: The programming language used for Flutter development.
+- **Bloc**: A library that helps implement the Bloc pattern for managing state in Flutter applications.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Ayush-developer/Flutter-Scalable-Graph-Using-Bloc.git
+   
+2. Navigate to the project directory:
+
+   cd Flutter-Scalable-Graph-Using-Bloc
+
+3. Install the dependencies:
+
+   flutter pub get
+
+4. Run the application:
+
+   flutter run
+
